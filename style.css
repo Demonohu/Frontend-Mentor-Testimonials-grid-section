@@ -1,0 +1,190 @@
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    padding: 0;
+    background-color:hsl(210, 46%, 95%);
+    font-size: 13px;
+}
+
+main{
+    margin: 10% 7%;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.first-box{
+    flex-basis: 74.5%;
+}
+
+.top, .bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom{
+    margin-top: 3%;
+}
+
+.Daniel{
+    flex-basis: 60%;
+    background-color: hsl(263, 55%, 52%);
+    justify-self: flex-start;
+    border-radius: 13px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top ;
+    background-position-x: 85%;
+}
+
+.Jonathan{
+    justify-self: flex-end;
+    flex-basis: 24%;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 13px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Jean{
+    justify-self: flex-end;
+    flex-basis: 24%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 13px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Patrick{
+    flex-basis: 60%;
+    background-color: hsl(219, 29%, 14%);
+    justify-self: flex-start;
+    border-radius: 13px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-box{
+    flex-basis: 18.5%;
+    border-radius: 13px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 26px;
+}
+
+.one{
+    display: flex;
+}
+
+.dp img{
+    border-radius: 2rem;
+    width: 2rem;
+}
+
+.dp{
+    border-radius: 2rem;
+    width: max-content;
+    height: max-content;
+    padding: 2px;
+    padding-bottom: 0;
+}
+
+.Patrick .dp{
+    background-color: hsl(263, 55%, 52%);
+}
+
+.Daniel .dp{
+    background-color: hsla(210, 46%, 95%, 0.5);
+}
+
+.one p{
+    margin: 0 auto 2px 13px;
+}
+
+h2{
+    font-weight: 600;
+}
+
+.info p:first-child:not(.second-box .info p, .Jean .info p), h2:not(.second-box h2, .Jean h2){
+    color: hsl(210, 46%, 95%)
+}
+
+.info p:last-child:not(.second-box .info p, .Jean .info p){
+    color: hsla(210, 46%, 95%, 0.5)
+}
+
+.three:not(.second-box .three, .Jean .three){
+    color: hsla(210, 46%, 95%, 0.7)
+}
+
+.info p:first-child:not(.Daniel .info p, .Jonathan .info p, .Patrick .info p), h2:not(.Daniel h2, .Jonathan h2, .Patrick h2){
+    color: hsl(217, 19%, 35%);
+}
+
+.info p:last-child:not(.Daniel .info p, .Jonathan .info p, .Patrick .info p){
+    color: hsla(217, 19%, 35%, 0.5);
+}
+
+.three:not(.Daniel .three, .Jonathan .three, .Patrick .three){
+    color: hsla(217, 19%, 35%, 0.7);
+}
+
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover{
+    text-decoration: none;
+}
+
+
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+@media all and (max-width:600px) {
+    .content, .top, .bottom{
+        flex-direction: column;
+    }
+
+    .first-box, .top, .Daniel, .Jean{
+        margin-bottom: 26px;
+    }
+}
+
+/*SEMI BIG SCREENS LIKE TABS*/
+@media all and (max-width: 1100px){
+    .content{
+        flex-direction: column;
+    }
+
+    .second-box{
+        margin-top: 26px;
+    }
+}
+
+@media all and (min-width : 601px ) and (max-width: 850px){
+    .Daniel, .Patrick{
+        flex-basis: 55%;
+    }
+}
+
+@media all and (max-width : 685px) and (min-width : 600px){
+    .Daniel, .Patrick{
+        flex-basis: 48%;
+    }
+
+    .Jean, .Jonathan{
+        flex-basis: 30%;
+    }
+}
